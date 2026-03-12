@@ -1,4 +1,4 @@
-import getWeather from './api/weather.js';
+import getWeather from './api/Weather.js';
 import Tarea from './classes/Tarea.js';
 import GestorTareas from './classes/GestorTareas.js';
 import {options} from './api/Geolocalization.js';
