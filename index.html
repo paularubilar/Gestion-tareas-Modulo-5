@@ -11,6 +11,8 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <!--Mi CSS-->
+    <link rel="stylesheet" href="./assets/css/style.css">
     <!-- Bootstrap JS -->
     <script
       defer
@@ -23,13 +25,29 @@
     <script defer type="module" src="./assets/js/script.js"></script>
   </head>
   <body>
+    <!--Clima -->
+    <div id="topBar" class="bg-light border-bottom text-center" style="min-height: 40px;">
+      <p class="small text-muted my-1">Detectando clima local...</p>
+    </div>
+    <!--nav, titulo-->
     <nav class="navbar bg-primary-subtle p-0" id="topBar"></nav>
     <!-- As a heading -->
-    <nav class="navbar navbar-dark bg-primary">
+    <nav class="navbar navbar-dark bg-secondary">
       <div class="container">
-        <span class="navbar-brand mb-0 h1">TaskFlow</span>
+        <span class="navbar-brand mb-0 h1">🌿 Flujo de Tareas</span>
       </div>
     </nav>
+
+    <!--Introduccion-->
+    <section class="hero">
+      <div class="hero-content">
+          <h2>Organiza tu Tiempo</h2>
+          <p>Cultiva tu productividad. Organiza tus tareas pendientes y recupera el equilibrio en tu día a día.</p>
+          <img src="./assets/img/img M5.png" class="img-fluid" alt="Dibujos de personas y reloj, representa la organización del tiemmpo">
+      </div>
+  </section>
+  
+
     <main class="container my-4">
       <div id="alertContainer"></div>
       <div class="row">
@@ -55,7 +73,7 @@
                 id="fechaLimite"
               />
             </div>
-            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="submit" class="btn btn-secondary">Agregar</button>
           </form>
         </div>
 
@@ -63,6 +81,20 @@
           <h2>Tareas</h2>
           <ul class="list-group" id="listaTareas"></ul>
         </div>
+<!--Filtrar las tareas-->
+<div class="mt-4 text-center">
+  <p class="small text-muted">Filtrar por estado:</p>
+  
+  <div class="d-flex justify-content-center align-items-center gap-2">
+      <button class="btn btn-outline-dark btn-sm" id="btnVerTodas">Todas</button>
+      <button class="btn btn-outline-warning btn-sm" id="btnVerPendientes">Pendientes</button>
+      <button class="btn btn-outline-success btn-sm" id="btnVerCompletadas">Completadas</button>
+      
+      <div id="loadingMessage" class="d-none ms-2">
+          <span class="spinner-border spinner-border-sm text-success"></span>
+      </div>
+  </div>
+</div>
       </div>
     </main>
   </body>

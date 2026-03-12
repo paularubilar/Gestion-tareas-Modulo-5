@@ -1,0 +1,39 @@
+/*colores */
+:root {
+    --verde-fondo: #f0f7f4; 
+    --verde-acento: #2d5a4c;
+    --texto-oscuro: #3e2723;
+}
+
+body {
+    background-color: var(--verde-fondo);
+    text-align: center;    
+    color: var(--texto-oscuro);
+}
+/* Navbar */
+.navbar.bg-secondary {
+    background-color: var(--verde-acento) !important;
+}
+.hero  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.hero-content {
+    max-width: 800px;
+    width: 100%;
+}
+
+/*imagen responsiva */
+.hero-content img {
+    width: 100%;
+    max-width: 400px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-top: 1rem;
+}
+.card-body {
+    padding: 15px;
+}
